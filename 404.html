@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><title>Mathe-Labor</title>
+<script>
+const M = { geraden: "gerade", tangenten: "tangente" };
+const p = location.pathname.replace(/^\/mathe-labore\/?/, "").split("/").filter(Boolean);
+if (p.length) p[0] = M[p[0]] || p[0];
+location.replace("https://amueller-89.github.io/mathe-labor/" + (p.length ? p.join("/") + "/" : "") + location.search + location.hash);
+</script>
